@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculator</title>
+        <!--?========> Font Awesome <========-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!--?========> Animate.CSS <========-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+        <!--?========> Google Fonts <========-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+            rel="stylesheet">
+        <!--?========> BoxIcon  <========-->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+        <!--?========> Tailwind CSS Style Sheet <========-->
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+
+
+        <!--?========> Main style Sheet <========-->
+        <link href="CSS/output.css" rel="stylesheet">
+
+        <!--?========> Favicon <========-->
+
+        <link rel="shortcut icon" href="images/calculatorBlue.png" type="image/x-icon">
+    </head>
+
+
+
+    <body>
+
+        <nav class="navbar bg-transparent shadow-lg">
+            <div class="flex-1">
+                <a class="btn btn-ghost text-2xl text-[#005c99] font-bold">Calculator</a>
+            </div>
+            <div class="flex-none overflow-hidden">
+
+                <label class="swap swap-rotate">
+                    <input type="checkbox" class="theme-controller" value="night" />
+
+                    <!-- sun icon -->
+                    <svg class="swap-on h-8 w-8 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
+                    </svg>
+
+                    <!-- moon icon -->
+                    <svg class="swap-off h-8 w-8 text-[#003972]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
+                    </svg>
+                </label>
+
+            </div>
+        </nav>
+        <div class="calculator mx-auto w-screen h-[91.5vh]">
+            <div class="container-fluid w-screen h-full mx-auto pt-5">
+                <div class="calculator__display h-28 mb-5 border-4 border-gray-400 rounded-lg w-[400px] bg-gray-200 mx-auto"
+                    id="display">
+                    <div class="content bg-transparent">
+                        <div
+                            class="input bg-transparent flex justify-end items-end text-right text-3xl min-w-full h-full font-bold font-['Libre_Baskerville'] text-[#2C3E50]">
+
+
+                        </div>
+                        <div
+                            class="output pe-4 bg-transparent flex justify-end items-end text-right text-2xl min-w-full h-full font-bold font-['Libre_Baskerville'] text-[#2C3E50]">
+
+
+                        </div>
+                    </div>
+
+                </div>
+                <div
+                    class="operators grid grid-cols-2 absolute rounded-full text-center gap-0 w-[440px] h-[440px] sm:w-[550px] sm:h-[550px] left-[50%] -translate-x-[50%] mx-auto overflow-hidden shadow-sm">
+
+
+                    <!-- ^ 1st quarter -->
+                    <div class="text-center  rounded-ss-full flex justify-start items-center p-16 relative">
+
+                        <div
+                            class="absolute transform -rotate-[60deg] sm:-rotate-[53deg] -top-[95px] left-24 sm:left-36 origin-center bg-gray-300 w-[70%] h-52">
+                        </div>
+                        <button data-key="**"
+                            class="key absolute top-[42px] sm:top-[35px] right-20 sm:right-24 sm:left-8 transform rotate-[18deg] sm:rotate-[25deg] -ms-20 sm:-ms-12 origin-center skew-y-12  bg-[#3498db] text-white w-44 h-20 sm:w-48 sm:h-24 text-3xl sm:text-4xl hover:bg-[#4dadee] shadow-2xl  active:shadow-sm transition-all active:transition-all duration-500 active:duration-500 text-center font-semibold font-['Libre_Baskerville']"><span
+                                class="pt-9 sm:pt-12 ps-10 sm:ps-16 absolute w-full transform -rotate-[28deg] sm:-rotate-[33deg] inset-0 ">**</span></button>
+
+
+                        <button data-key="%"
+                            class="key absolute bottom-12  left-0 transform rotate-[17deg] -mb-10 sm:-mb-6 origin-center skew-y-12  bg-[#0079b9] text-white w-32 h-20 sm:w-44 sm:h-28 text-3xl sm:text-4xl hover:bg-[#4dadee] shadow-2xl active:shadow-sm transition-all active:transition-all duration-500 active:duration-500 text-center ps-16 font-semibold "><span
+                                class="absolute w-full inset-0 ps-16 pt-9 sm:ps-20 sm:pt-12 transform rotate-[155deg] origin-center">%</span></button>
+
+
+                        <button data-key="brackets"
+                            class="key absolute -bottom-8 -left-5 transform rotate-[5deg] origin-center bg-[#005c99] text-white w-32 h-20 sm:w-44 sm:h-[100px] -mb-3 text-3xl sm:text-4xl hover:bg-[#4dadee] shadow-2xl active:shadow-sm transition-all active:transition-all duration-500 active:duration-500 text-center ps-16 font-semibold font-['Libre_Baskerville'] "><span
+                                class="absolute w-full inset-0 pe-9 pt-5 -rotate-[5deg] sm:pe-14 sm:pt-7 text-center">(
+                                )</span></button>
+
+                    </div>
+
+                    <!-- ^ 2nd quarter -->
+                    <div class="text-center  rounded-se-full flex justify-end items-center p-16 relative">
+
+                        <div
+                            class="absolute transform rotate-[60deg] sm:rotate-[53deg] -top-[100px] sm:-top-[105px] right-24 sm:right-36 origin-center bg-gray-300 w-[70%] h-52">
+                        </div>
+
+                        <button data-key="*"
+                            class="key absolute top-[42px] sm:top-[35px] left-20 sm:left-24 sm:right-8 transform -rotate-[18deg] sm:-rotate-[25deg] -me-20 sm:-me-12 origin-center -skew-y-12  bg-[#3498db] text-white w-40 h-20 sm:w-44 sm:h-24 text-3xl sm:text-4xl hover:bg-[#4dadee] shadow-2xl  active:shadow-sm transition-all active:transition-all duration-500 active:duration-500 text-center font-semibold font-['Libre_Baskerville']"><span
+                                class="pt-9 sm:pt-12 pe-10 sm:pe-14 absolute rotate-[28deg] sm:rotate-[33deg] w-full inset-0 ">*</span></button>
+
+                        <button data-key="/"
+                            class="key absolute bottom-12  right-0 transform -rotate-[17deg] -mb-10 sm:-mb-6 origin-center -skew-y-12  bg-[#0079b9] text-white w-32 h-20 sm:w-44 sm:h-28 text-3xl sm:text-4xl hover:bg-[#4dadee] shadow-2xl active:shadow-sm transition-all active:transition-all duration-500 active:duration-500 text-center ps-16 font-semibold font-['Libre_Baskerville'] "><span
+                                class="absolute w-full inset-0 pe-14 pt-9 sm:pe-16 sm:pt-12 transform -rotate-[158deg] origin-center">÷</span></button>
+
+
+                        <button data-key="-"
+                            class="key absolute -bottom-8 -right-5 transform -rotate-[5deg] origin-center bg-[#005c99] text-white w-32 h-20 sm:w-44 sm:h-[100px] -mb-3 text-3xl sm:text-4xl hover:bg-[#4dadee] shadow-2xl active:shadow-sm transition-all active:transition-all duration-500 active:duration-500 text-center ps-16 font-semibold font-['Libre_Baskerville'] "><span
+                                class="absolute w-full inset-0 ps-10 pt-5 sm:ps-14 sm:pt-7 text-center">-</span></button>
+
+                    </div>
+
+
+
+                    <!-- ^ 3rd quarter -->
+                    <div class="text-center rounded-es-full flex justify-start items-center p-16 relative">
+
+                        <button data-key="del"
+                            class="key absolute -left-5 top-8 -rotate-[3deg] origin-center bg-[#004079] text-white  w-32 h-20 sm:w-44 sm:h-24 text-xl sm:text-2xl  hover:bg-[#4dadee] shadow-2xl active:shadow-sm transition-all active:transition-all duration-500 active:duration-500 text-center ps-10 font-semibold font-['Libre_Baskerville'] "><span
+                                class="absolute w-full inset-0 text-center pt-5 sm:pt-7 sm:pe-7 pe-3">del</span></button>
+                        <button data-key="clear"
+                            class="key absolute left-7 top-20 sm:left-0 sm:top-28 transform -rotate-[20deg] origin-center bg-[#003972] z-50 text-white  w-32 h-16 sm:w-44 sm:h-20 text-3xl sm:text-4xl  hover:bg-[#4dadee] shadow-lg active:shadow-sm transition-all active:transition-all duration-500 active:duration-500 text-left sm:text-center font-semibold font-['Exo_2'] "><span
+                                class="absolute w-full inset-0 pt-5 sm:pt-5 transform rotate-[20deg] ps-8 sm:ps-5 origin-center">C</span></button>
+
+                    </div>
+
+
+
+                    <!-- ^ 4th quarter -->
+                    <div class="text-center rounded-ee-full flex justify-end items-center p-16 relative">
+                        <button data-key="+"
+                            class="key absolute -right-5 top-8 rotate-[3deg] origin-center bg-[#004079] text-white  w-32 h-20 sm:w-44 sm:h-24 text-3xl sm:text-4xl  hover:bg-[#4dadee] shadow-2xl active:shadow-sm transition-all active:transition-all duration-500 active:duration-500 text-center ps-10 font-semibold font-['Libre_Baskerville'] "><span
+                                class="absolute w-full inset-0 text-center pt-5 sm:ps-7 ps-4">+</span></button>
+                        <button data-key="="
+                            class="key absolute right-7 top-20 sm:right-0 sm:top-28 transform rotate-[20deg] origin-center bg-[#003972] z-50 text-white  w-32 h-16 sm:w-44 sm:h-20 text-4xl sm:text-5xl  hover:bg-[#4dadee] shadow-lg active:shadow-sm transition-all active:transition-all duration-500 active:duration-500 text-right sm:text-center font-semibold font-['Libre_Baskerville'] "><span
+                                class="absolute w-full inset-0 pt-4 sm:pt-5 transform -rotate-[20deg] pe-6 sm:pe-5 origin-center">=</span></button>
+
+                    </div>
+                </div>
+                <div
+                    class="keys z-20 grid grid-cols-3 rounded-full text-center top-14 sm:top-[70px] bg-white w-[330px] h-[330px] sm:w-[400px] sm:h-[400px] gap-0 mx-auto relative px-12 py-12 sm:px-16 sm:py-14 shadow-xl">
+                    <div data-key="7"
+                        class="key cursor-pointer btn-ghost w-14 h-14 sm:w-16 sm:h-16 rounded-full flex justify-center items-center mx-auto bg-[#BDC3C7] shadow-2xl active:shadow-sm transition-all active:transition-all duration-500 active:duration-500 text-center text-lg font-semibold font-['Libre_Baskerville'] text-[#2C3E50]">
+                        7</div>
+                    <div data-key="8"
+                        class="key cursor-pointer btn-ghost w-14 h-14 sm:w-16 sm:h-16 rounded-full flex justify-center items-center mx-auto bg-[#BDC3C7] shadow-2xl active:shadow-sm transition-all active:transition-all duration-500 active:duration-500 text-center text-lg font-semibold font-['Libre_Baskerville'] text-[#2C3E50]">
+                        8</div>
+                    <div data-key="9"
+                        class="key cursor-pointer btn-ghost w-14 h-14 sm:w-16 sm:h-16 rounded-full flex justify-center items-center mx-auto bg-[#BDC3C7] shadow-2xl active:shadow-sm transition-all active:transition-all duration-500 active:duration-500 text-center text-lg font-semibold font-['Libre_Baskerville'] text-[#2C3E50]">
+                        9</div>
+                    <div data-key="4"
+                        class="key cursor-pointer btn-ghost w-14 h-14 sm:w-16 sm:h-16 rounded-full flex justify-center items-center mx-auto bg-[#BDC3C7] shadow-2xl active:shadow-sm transition-all active:transition-all duration-500 active:duration-500 text-center text-lg font-semibold font-['Libre_Baskerville'] text-[#2C3E50]">
+                        4</div>
+                    <div data-key="5"
+                        class="key cursor-pointer btn-ghost w-14 h-14 sm:w-16 sm:h-16 rounded-full flex justify-center items-center mx-auto bg-[#BDC3C7] shadow-2xl active:shadow-sm transition-all active:transition-all duration-500 active:duration-500 text-center text-lg font-semibold font-['Libre_Baskerville'] text-[#2C3E50]">
+                        5</div>
+                    <div data-key="6"
+                        class="key cursor-pointer btn-ghost w-14 h-14 sm:w-16 sm:h-16 rounded-full flex justify-center items-center mx-auto bg-[#BDC3C7] shadow-2xl active:shadow-sm transition-all active:transition-all duration-500 active:duration-500 text-center text-lg font-semibold font-['Libre_Baskerville'] text-[#2C3E50]">
+                        6</div>
+                    <div data-key="1"
+                        class="key cursor-pointer btn-ghost w-14 h-14 sm:w-16 sm:h-16 rounded-full flex justify-center items-center mx-auto bg-[#BDC3C7] shadow-2xl active:shadow-sm transition-all active:transition-all duration-500 active:duration-500 text-center text-lg font-semibold font-['Libre_Baskerville'] text-[#2C3E50]">
+                        1</div>
+                    <div data-key="2"
+                        class="key cursor-pointer btn-ghost w-14 h-14 sm:w-16 sm:h-16 rounded-full flex justify-center items-center mx-auto bg-[#BDC3C7] shadow-2xl active:shadow-sm transition-all active:transition-all duration-500 active:duration-500 text-center text-lg font-semibold font-['Libre_Baskerville'] text-[#2C3E50]">
+                        2</div>
+                    <div data-key="3"
+                        class="key cursor-pointer btn-ghost w-14 h-14 sm:w-16 sm:h-16 rounded-full flex justify-center items-center mx-auto bg-[#BDC3C7] shadow-2xl active:shadow-sm transition-all active:transition-all duration-500 active:duration-500 text-center text-lg font-semibold font-['Libre_Baskerville'] text-[#2C3E50]">
+                        3</div>
+                    <div data-key="00"
+                        class="key cursor-pointer btn-ghost w-14 h-14 sm:w-16 sm:h-16 rounded-full flex justify-center items-center mx-auto  bg-[#BDC3C7] shadow-2xl active:shadow-sm transition-all active:transition-all duration-500 active:duration-500 text-center text-xl font-semibold font-['Libre_Baskerville'] text-[#2C3E50]">
+                        00
+                    </div>
+                    <div data-key="0"
+                        class="key cursor-pointer btn-ghost w-14 h-14 sm:w-16 sm:h-16 rounded-full flex justify-center items-center mx-auto  bg-[#BDC3C7] shadow-2xl active:shadow-sm transition-all active:transition-all duration-500 active:duration-500 text-center text-lg font-semibold font-['Libre_Baskerville'] text-[#2C3E50]">
+                        0</div>
+                    <div data-key="."
+                        class="key cursor-pointer btn-ghost w-14 h-14 sm:w-16 sm:h-16 pb-4 rounded-full flex justify-center items-center mx-auto  bg-[#BDC3C7] shadow-2xl active:shadow-sm transition-all active:transition-all duration-500 active:duration-500 text-center text-4xl font-semibold font-['Libre_Baskerville'] text-[#2C3E50]">
+                        .</div>
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- !========> JS File <========-->
+        <script src="JS/main.js"></script>
+    </body>
+
+
+
+
+</html>
